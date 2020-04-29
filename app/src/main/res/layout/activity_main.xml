@@ -1,0 +1,299 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:weightSum="2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" >
+        <TextView
+            android:id="@+id/data"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:text=""
+            android:gravity="end|bottom"
+            android:textColor="@color/colorWhite"
+            android:background="#1D1D1D"
+            android:textSize="40sp"/>
+
+        <TextView
+            android:id="@+id/output"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:text=""
+            android:gravity="end|center"
+            android:textColor="@color/colorWhite"
+            android:background="#1D1D1D"
+            android:textSize="40sp"/>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/addorsub"
+                android:layout_width="0dp"
+                android:layout_height="80dp"
+                android:layout_weight="1"
+                android:background="@drawable/ripple_effect_numbers"
+                android:onClick="AddOrSub"
+                android:text="+/-"
+                android:textColor="@color/colorWhite"
+                android:textSize="30sp" />
+
+            <Button
+                android:onClick="Brackets"
+                android:id="@+id/brackets"
+                android:textColor="@color/colorWhite"
+                android:textSize="30sp"
+                android:layout_width="0dp"
+                android:layout_height="80dp"
+                android:layout_weight="1"
+                android:text="()"
+                android:background="@drawable/ripple_effect_numbers"/>
+
+            <Button
+                android:onClick="OperationClicked"
+                android:id="@+id/percentage"
+                android:textColor="@color/colorWhite"
+                android:textSize="30sp"
+                android:layout_width="0dp"
+                android:layout_height="80dp"
+                android:layout_weight="1"
+                android:text="%"
+                android:background="@drawable/ripple_effect_numbers"/>
+
+            <Button
+                android:onClick="OperationClicked"
+                android:id="@+id/divison"
+                android:textColor="@color/colorWhite"
+                android:textSize="30sp"
+                android:layout_width="0dp"
+                android:layout_height="80dp"
+                android:layout_weight="1"
+                android:text="/"
+                android:background="@drawable/ripple_effect_operations"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <Button
+                android:onClick="DisplayNumber"
+                android:id="@+id/number7"
+                android:textColor="@color/colorWhite"
+                android:textSize="30sp"
+                android:layout_width="0dp"
+                android:layout_height="80dp"
+                android:layout_weight="1"
+                android:text="7"
+                android:background="@drawable/ripple_effect_numbers"/>
+
+            <Button
+                android:onClick="DisplayNumber"
+                android:id="@+id/number8"
+                android:textColor="@color/colorWhite"
+                android:textSize="30sp"
+                android:layout_width="0dp"
+                android:layout_height="80dp"
+                android:layout_weight="1"
+                android:text="8"
+                android:background="@drawable/ripple_effect_numbers"/>
+
+            <Button
+                android:onClick="DisplayNumber"
+                android:id="@+id/number9"
+                android:textColor="@color/colorWhite"
+                android:textSize="30sp"
+                android:layout_width="0dp"
+                android:layout_height="80dp"
+                android:layout_weight="1"
+                android:text="9"
+                android:background="@drawable/ripple_effect_numbers"/>
+
+            <Button
+                android:onClick="OperationClicked"
+                android:id="@+id/multiplication"
+                android:textColor="@color/colorWhite"
+                android:textSize="30sp"
+                android:layout_width="0dp"
+                android:layout_height="80dp"
+                android:layout_weight="1"
+                android:text="x"
+                android:background="@drawable/ripple_effect_operations"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <Button
+                android:onClick="DisplayNumber"
+                android:id="@+id/number4"
+                android:textColor="@color/colorWhite"
+                android:textSize="30sp"
+                android:layout_width="0dp"
+                android:layout_height="80dp"
+                android:layout_weight="1"
+                android:text="4"
+                android:background="@drawable/ripple_effect_numbers"/>
+
+            <Button
+                android:onClick="DisplayNumber"
+                android:id="@+id/number5"
+                android:textColor="@color/colorWhite"
+                android:textSize="30sp"
+                android:layout_width="0dp"
+                android:layout_height="80dp"
+                android:layout_weight="1"
+                android:text="5"
+                android:background="@drawable/ripple_effect_numbers"/>
+
+            <Button
+                android:onClick="DisplayNumber"
+                android:id="@+id/number6"
+                android:textColor="@color/colorWhite"
+                android:textSize="30sp"
+                android:layout_width="0dp"
+                android:layout_height="80dp"
+                android:layout_weight="1"
+                android:text="6"
+                android:background="@drawable/ripple_effect_numbers"/>
+
+            <Button
+                android:onClick="OperationClicked"
+                android:id="@+id/subtraction"
+                android:textColor="@color/colorWhite"
+                android:textSize="30sp"
+                android:layout_width="0dp"
+                android:layout_height="80dp"
+                android:layout_weight="1"
+                android:text="_"
+                android:background="@drawable/ripple_effect_operations"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <Button
+                android:onClick="DisplayNumber"
+                android:id="@+id/number1"
+                android:textColor="@color/colorWhite"
+                android:textSize="30sp"
+                android:layout_width="0dp"
+                android:layout_height="80dp"
+                android:layout_weight="1"
+                android:text="1"
+                android:background="@drawable/ripple_effect_numbers"/>
+
+            <Button
+                android:onClick="DisplayNumber"
+                android:id="@+id/number2"
+                android:textColor="@color/colorWhite"
+                android:textSize="30sp"
+                android:layout_width="0dp"
+                android:layout_height="80dp"
+                android:layout_weight="1"
+                android:text="2"
+                android:background="@drawable/ripple_effect_numbers"/>
+
+            <Button
+                android:onClick="DisplayNumber"
+                android:id="@+id/number3"
+                android:textColor="@color/colorWhite"
+                android:textSize="30sp"
+                android:layout_width="0dp"
+                android:layout_height="80dp"
+                android:layout_weight="1"
+                android:text="3"
+                android:background="@drawable/ripple_effect_numbers"/>
+
+            <Button
+                android:onClick="OperationClicked"
+                android:id="@+id/addition"
+                android:textColor="@color/colorWhite"
+                android:textSize="30sp"
+                android:layout_width="0dp"
+                android:layout_height="80dp"
+                android:layout_weight="1"
+                android:text="+"
+                android:background="@drawable/ripple_effect_operations"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <Button
+                android:onClick="ClearScreen"
+                android:id="@+id/clear"
+                android:textColor="@color/colorWhite"
+                android:textSize="30sp"
+                android:layout_width="0dp"
+                android:layout_height="80dp"
+                android:layout_weight="1"
+                android:text="C"
+                android:background="@drawable/ripple_effect_numbers"/>
+
+            <Button
+                android:onClick="DisplayNumber"
+                android:id="@+id/number0"
+                android:textColor="@color/colorWhite"
+                android:textSize="30sp"
+                android:layout_width="0dp"
+                android:layout_height="80dp"
+                android:layout_weight="1"
+                android:text="0"
+                android:background="@drawable/ripple_effect_numbers"/>
+
+            <Button
+                android:onClick="DisplayNumber"
+                android:id="@+id/dot"
+                android:textColor="@color/colorWhite"
+                android:textSize="30sp"
+                android:layout_width="0dp"
+                android:layout_height="80dp"
+                android:layout_weight="1"
+                android:text="."
+                android:background="@drawable/ripple_effect_numbers"/>
+
+            <Button
+                android:onClick="Equal"
+                android:id="@+id/equal"
+                android:textColor="@color/colorWhite"
+                android:textSize="30sp"
+                android:layout_width="0dp"
+                android:layout_height="80dp"
+                android:layout_weight="1"
+                android:text="="
+                android:background="@drawable/red_button"/>
+        </LinearLayout>
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
